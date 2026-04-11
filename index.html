@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cgpa Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="main-div">
+        <div id="header">
+            <h2>Cgpa Calculator</h2>
+        </div>
+        <div id="semester-container">
+
+            <div class="semester">
+                <div class="semester-left">
+                    <h2 class="semester-heading">Semester 1</h2>
+                    <div class="courses">
+                        <div class="course-row">
+                            <input type="text" class="course" placeholder="Course name">
+                            <select name="Grade" class="grade">
+                                <option value="" selected hidden>Grade</option>
+                                <option value="4.0">A+ (90+)</option>
+                                <option value="4.0">A (85-89)</option>
+                                <option value="3.8">A- (80-84)</option>
+                                <option value="3.4">B+ (75-79)</option>
+                                <option value="3.0">B (71-74)</option>
+                                <option value="2.8">B- (68-70)</option>
+                                <option value="2.4">C+ (64-67)</option>
+                                <option value="2.0">C (61-63)</option>
+                                <option value="1.8">C- (57-60)</option>
+                                <option value="1.4">D+ (53-56)</option>
+                                <option value="1.0">D (45-52)</option>
+                            </select>
+                            <select name="credits" class="credits">
+                                <option value="" disabled selected hidden>Credits</option>
+                                <option value="4">4</option>
+                                <option value="3">3</option>
+                                <option value="2">2</option>
+                            </select>
+                            <button class="delete-course">X</button>
+                        </div>
+                        <div class="course-row">
+                            <input type="text" class="course" placeholder="Course name">
+                            <select name="Grade" class="grade">
+                                <option value="" disabled selected hidden>Grade</option>
+                                <option value="4.0">A+ (90+)</option>
+                                <option value="4.0">A (85-89)</option>
+                                <option value="3.8">A- (80-84)</option>
+                                <option value="3.4">B+ (75-79)</option>
+                                <option value="3.0">B (71-74)</option>
+                                <option value="2.8">B- (68-70)</option>
+                                <option value="2.4">C+ (64-67)</option>
+                                <option value="2.0">C (61-63)</option>
+                                <option value="1.8">C- (57-60)</option>
+                                <option value="1.4">D+ (53-56)</option>
+                                <option value="1.0">D (45-52)</option>
+                            </select>
+                            <select name="credits" class="credits">
+                                <option value="" disabled selected hidden>Credits</option>
+                                <option value="4">4</option>
+                                <option value="3">3</option>
+                                <option value="2">2</option>
+                            </select>
+                            <button class="delete-course">X</button>
+                        </div>
+                        <div class="course-row">
+                            <input type="text" class="course" placeholder="Course name">
+                            <select name="Grade" class="grade">
+                                <option value="" disabled selected hidden>Grade</option>
+                                <option value="4.0">A+ (90+)</option>
+                                <option value="4.0">A (85-89)</option>
+                                <option value="3.8">A- (80-84)</option>
+                                <option value="3.4">B+ (75-79)</option>
+                                <option value="3.0">B (71-74)</option>
+                                <option value="2.8">B- (68-70)</option>
+                                <option value="2.4">C+ (64-67)</option>
+                                <option value="2.0">C (61-63)</option>
+                                <option value="1.8">C- (57-60)</option>
+                                <option value="1.4">D+ (53-56)</option>
+                                <option value="1.0">D (45-52)</option>
+                            </select>
+                            <select name="credits" class="credits">
+                                <option value="" disabled selected hidden>Credits</option>
+                                <option value="4">4</option>
+                                <option value="3">3</option>
+                                <option value="2">2</option>
+                            </select>
+                            <button class="delete-course">X</button>
+                        </div>
+                        <div class="course-row">
+                            <input type="text" class="course" placeholder="Course name">
+                            <select name="Grade" class="grade">
+                                <option value="" disabled selected hidden>Grade</option>
+                                <option value="4.0">A+ (90+)</option>
+                                <option value="4.0">A (85-89)</option>
+                                <option value="3.8">A- (80-84)</option>
+                                <option value="3.4">B+ (75-79)</option>
+                                <option value="3.0">B (71-74)</option>
+                                <option value="2.8">B- (68-70)</option>
+                                <option value="2.4">C+ (64-67)</option>
+                                <option value="2.0">C (61-63)</option>
+                                <option value="1.8">C- (57-60)</option>
+                                <option value="1.4">D+ (53-56)</option>
+                                <option value="1.0">D (45-52)</option>
+                            </select>
+                            <select name="credits" class="credits">
+                                <option value="" disabled selected hidden>Credits</option>
+                                <option value="4">4</option>
+                                <option value="3">3</option>
+                                <option value="2">2</option>
+                            </select>
+                            <button class="delete-course">X</button>
+                        </div>
+
+                    </div>
+
+                    <div class="cgpa">
+                        <span class="calculation">Semester Cgpa: 0.00</span>
+                        <div>
+                            <button class="receipt" onclick="printReceipt(this)">Print Receipt</button>
+                            <button class="add-course">Add Course</button>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="partition"></div>
+                <div class="semester-right">
+
+                    <div class="progress_wrapper">
+                        <div class="progress"></div>
+
+                        <div class="data">
+                            <h1 class="progress-cgpa">0.00</h1>
+                            <p>Out of 4.0</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div id="add-semester">
+            <button id="add-semester-btn">Add Semester</button>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
