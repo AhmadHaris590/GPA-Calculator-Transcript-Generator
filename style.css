@@ -16,7 +16,7 @@ body {
 
 #main-div {
     width: 100%;
-    margin-bottom: 0;
+    margin-bottom: 40px;
 }
 #header{
     background: white;
@@ -33,7 +33,7 @@ body {
     /* justify-content: center ; */
     border-radius: 10px;
     box-shadow: 0 10px 30px rgba(253, 186, 116, 0.2);
-    margin: 40px auto;
+    margin: 40px auto auto auto;
     background-color: #FFFFFF;
     flex-wrap: wrap;
 }
@@ -108,9 +108,8 @@ body {
     filter: brightness(1.1);
 }
 #add-semester{
-position: fixed;
-right: 20%;
-margin-top: -30px;
+margin-left: 71%;
+margin-top: 20px;
 
 }
 
@@ -132,7 +131,8 @@ select option:hover {
     background-color: #645de8 !important;
 }
 
-.delete-course{
+.delete-course,
+.delete-semester{
     border: 1px solid rgb(217,217,217);
     border-radius: 100%;
     width: 24px;
@@ -145,19 +145,30 @@ select option:hover {
     margin-right: 10px;
 
 }
-.delete-course:hover{
+.delete-course:hover,
+.delete-semester:hover{
     color: rgb(243, 118, 118);
     border: 1px solid rgb(237, 155, 155);
 }
+.inside-header{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+.delete-semester{
+
+}
 
 .partition {
-    /* width: 100px;
-    height:100%;
-    background: black;
-    color: black; */
     border-right: 1px solid rgb(212, 212, 212);
     box-shadow: 0px 0px 8px rgb(174, 174, 174);
     margin: 0 10px;
+}
+.horizontal-partition{
+    border-bottom: 1px solid rgb(212, 212, 212);
+    margin: 20px 40px;
+
+
 }
 
 .semester-right{
@@ -188,13 +199,14 @@ select option:hover {
 .progress {
     width: var(--circle-width);
     height: var(--circle-height);
-    background: green;
+    /* background: #facc15; */
     border-radius: 0 0 999px 999px;
     position: absolute;
     top: 100%;
     left: 0;
     transform: rotate(calc(var(--value)/4*180deg));
     transform-origin: center top;
+    transition: all 1s ease-in 0.1s;
 }
 
 .progress_wrapper::after {

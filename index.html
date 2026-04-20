@@ -14,10 +14,13 @@
             <h2>Cgpa Calculator</h2>
         </div>
         <div id="semester-container">
-
+            
             <div class="semester">
                 <div class="semester-left">
-                    <h2 class="semester-heading">Semester 1</h2>
+                    <div class="inside-header">
+                        <h2 class="semester-heading">Semester 1</h2>
+                        <button class="delete-semester">X</button>
+                    </div>
                     <div class="courses">
                         <div class="course-row">
                             <input type="text" class="course" placeholder="Course name">
@@ -115,9 +118,9 @@
                             </select>
                             <button class="delete-course">X</button>
                         </div>
-
+                        
                     </div>
-
+                    
                     <div class="cgpa">
                         <span class="calculation">Semester Cgpa: 0.00</span>
                         <div>
@@ -129,21 +132,22 @@
                 </div>
                 <div class="partition"></div>
                 <div class="semester-right">
-
+                    
                     <div class="progress_wrapper">
                         <div class="progress"></div>
-
+                        
                         <div class="data">
                             <h1 class="progress-cgpa">0.00</h1>
                             <p>Out of 4.0</p>
                         </div>
                     </div>
                 </div>
-
+                
+                <!-- <div class="horizontal-partition"></div> -->
             </div>
         </div>
         <div id="add-semester">
-            <button id="add-semester-btn">Add Semester</button>
+            <button id="add-semester-btn" onclick="addSemester(this)">Add Semester</button>
         </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
