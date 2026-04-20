@@ -1,12 +1,16 @@
-* {
+html,
+body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
 }
+
 body {
-    font-family: "popins", sans-serif;
-    /* background-color: rgb(247, 246, 246); */
-    background: linear-gradient(135deg, #FAF7F2 40%, #F5EBE0 100%);;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #FAF7F2 40%, #F5EBE0 100%);
+    min-height: 100vh;
 }
 
 :root {
@@ -18,37 +22,37 @@ body {
     width: 100%;
     margin-bottom: 40px;
 }
-#header{
+
+#header {
     background: white;
-    padding: 15px 10px;
-    box-shadow: 0px 0px 10px rgb(188, 187, 187);
-    font-size: larger;
-    color: #FDBA74
+    padding: 20px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.05);
+    font-size: 1.5rem;
+    color: #F97316;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 #semester-container {
-    /* display: flex; */
-    max-width: 60%;
-    /* align-items: center; */
-    /* justify-content: center ; */
-    border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(253, 186, 116, 0.2);
-    margin: 40px auto auto auto;
+    width: 90%;
+    max-width: 1000px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(249, 115, 22, 0.1);
+    margin: 40px auto;
     background-color: #FFFFFF;
-    flex-wrap: wrap;
+    overflow: hidden;
 }
 
 .semester {
     display: flex;
-    /* flex-wrap: wrap; */
-    padding: 30px 20px;
-    min-width: 80%;
-    gap: 20px;
-    margin-left: 30px;
+    padding: 40px;
+    gap: 30px;
+    width: 100%;
 }
-.semester-heading{
-    /* width: 100%; */
-    /* display: block; */
+
+.semester-heading {
     margin-bottom: 10px;
     color: #FDBA74
 }
@@ -58,7 +62,8 @@ body {
     display: flex;
     gap: 8px;
     margin-bottom: 8px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    align-items: center;
 }
 
 .course-row input,
@@ -67,7 +72,6 @@ body {
     border: 0px solid transparent;
     box-shadow: 1px 2px 4px rgb(197, 197, 197);
     border-radius: 6px;
-    /* width: 180px; */
     font-size: 15px;
 }
 
@@ -84,21 +88,20 @@ body {
     justify-content: space-between;
     margin-top: 20px;
     align-items: center;
-    /* margin-right: 20px; */
-    /* gap: 50px; */
 }
 
 .add-course,
 #add-semester-btn {
-    padding: 8px 18px;
+    padding: 10px 20px;
     border-radius: 12px;
-    background: #645de8;
     color: white;
-    border: transparent;
+    border: none;
     font-size: 15px;
     cursor: pointer;
-    box-shadow: 0px 0px 8px rgb(184, 184, 255);
+    box-shadow: 0 4px 15px rgba(249, 115, 22, 0.2);
     background: linear-gradient(135deg, #F97316 0%, #EF4444 100%);
+    transition: all 0.3s ease;
+    white-space: nowrap;
 }
 
 .add-course:hover,
@@ -107,21 +110,24 @@ body {
     box-shadow: 0 8px 15px rgba(249, 115, 22, 0.4);
     filter: brightness(1.1);
 }
-#add-semester{
-margin-left: 71%;
-margin-top: 20px;
 
+#add-semester {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0 60px 0;
+    width: 100%;
 }
 
-.receipt{
+.receipt {
     padding: 5px 10px;
     border-radius: 15px;
     background-color: transparent;
     border: 1px solid #F97316;
     color: #F97316;
+    transition: all 0.3s ease;
 }
 
-.receipt:hover{
+.receipt:hover {
     transform: translateY(-2px) scale(1.02);
     box-shadow: 0 2px 10px rgba(249, 115, 22, 0.4);
     filter: brightness(1.1);
@@ -132,8 +138,8 @@ select option:hover {
 }
 
 .delete-course,
-.delete-semester{
-    border: 1px solid rgb(217,217,217);
+.delete-semester {
+    border: 1px solid rgb(217, 217, 217);
     border-radius: 100%;
     width: 24px;
     height: 24px;
@@ -143,46 +149,52 @@ select option:hover {
     color: rgb(167, 160, 160);
     margin-left: 20px;
     margin-right: 10px;
-
+    transition: all 0.3s ease;
 }
+
 .delete-course:hover,
-.delete-semester:hover{
+.delete-semester:hover {
     color: rgb(243, 118, 118);
     border: 1px solid rgb(237, 155, 155);
 }
-.inside-header{
+
+.inside-header {
     display: flex;
     justify-content: space-between;
     margin-bottom: 15px;
-}
-.delete-semester{
-
+    align-items: center;
 }
 
 .partition {
     border-right: 1px solid rgb(212, 212, 212);
     box-shadow: 0px 0px 8px rgb(174, 174, 174);
     margin: 0 10px;
+    height: auto;
 }
-.horizontal-partition{
+
+.horizontal-partition {
     border-bottom: 1px solid rgb(212, 212, 212);
     margin: 20px 40px;
-
-
 }
 
-.semester-right{
-    margin: auto;
+.semester-left {
+    flex: 1;
+}
+
+.semester-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 70px;
 }
 
 .progress_wrapper {
     width: var(--circle-width);
     height: var(--circle-height);
     position: relative;
-    margin-top: 50px;
-    /* border: 2px solid black; */
     overflow: hidden;
-    margin-top:0;
+    margin-top: 0;
 }
 
 .progress_wrapper::before {
@@ -199,7 +211,6 @@ select option:hover {
 .progress {
     width: var(--circle-width);
     height: var(--circle-height);
-    /* background: #facc15; */
     border-radius: 0 0 999px 999px;
     position: absolute;
     top: 100%;
@@ -222,16 +233,20 @@ select option:hover {
 
 .data {
     position: absolute;
-    top: 45%;
-    left: 70px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -10%);
+    text-align: center;
     z-index: 5;
+    width: 100%;
 }
 
-.data p{
+.data p {
     font-size: 15px;
     color: rgb(116, 116, 116);
 }
-#overlay{
+
+#overlay {
     background: rgba(199, 199, 199, 0.401);
     position: fixed;
     top: 0;
@@ -239,73 +254,199 @@ select option:hover {
     inset: 0;
     backdrop-filter: blur(4px);
     z-index: 999;
-
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-#modal-overlay{
+#modal-overlay {
     display: flex;
     flex-direction: column;
     background: white;
-    width: 60%;
+    width: 90%;
+    max-width: 600px;
     position: fixed;
     z-index: 1000;
-    /* align-items: center; */
     justify-content: center;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px #c2c2c2;
-    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+    padding: 25px;
+    max-height: 90vh;
+    overflow-y: auto;
 }
 
-
-.model-close-button{
+.model-close-button {
     display: flex;
     justify-content: flex-end;
     align-items: center;
 }
 
-#close-model{
+#close-model {
     width: 25px;
     height: 25px;
-    border-radius:100%;
+    border-radius: 100%;
     font-size: 15px;
     background-color: transparent;
     color: rgb(101, 100, 100);
     border: 1px solid rgb(101, 100, 100);
-
-}
-.progress-cgpa{
-    /* color: #6366F1 */
+    cursor: pointer;
 }
 
-#download-btn{
+#download-btn {
     padding: 7px 12px;
     border-radius: 5px;
     border: transparent;
     background-color: rgb(78, 78, 254);
     color: white;
+    cursor: pointer;
 }
-#transcript-model{
-    /* min-height: 500px; */
+
+#transcript-model {
     max-height: 500px;
     display: flex;
     flex-direction: column;
     gap: 30px;
     margin: 0 20px;
     margin-bottom: 30px;
-
 }
 
-#transcript-content table{
+#transcript-content table {
     width: 100%;
     border-collapse: collapse;
 }
 
 #transcript-content th,
-#transcript-content td{
-    padding: 8px;
-    border:1px solid #ddd;
+#transcript-content td {
+    padding: 12px 8px;
+    border: 1px solid #eee;
     text-align: center;
+}
+
+/* Media Queries for Responsiveness */
+
+@media screen and (max-width: 1024px) {
+    #semester-container {
+        width: 95%;
+    }
+
+    .semester {
+        padding: 30px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .semester {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 15px;
+    }
+
+    .semester-left {
+        width: 100%;
+    }
+
+    .partition {
+        display: none;
+    }
+
+    .semester-right {
+        margin-top: 20px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .course-row {
+        justify-content: flex-start;
+        gap: 8px;
+    }
+
+    .course-row input {
+        width: calc(100% - 130px);
+        min-width: 120px;
+    }
+
+    .delete-course,
+    .delete-semester {
+        margin-left: 10px;
+        margin-right: 0;
+    }
+
+    .cgpa {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .horizontal-partition {
+        margin: 10px 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #header {
+        font-size: 1.2rem;
+        padding: 15px;
+    }
+
+    .semester {
+        padding: 20px 10px;
+    }
+    .semester-right{
+        padding: 0;
+    }
+
+    .semester-heading {
+        font-size: 1.3rem;
+        margin-bottom: 0;
+    }
+
+    .inside-header {
+        gap: 10px;
+    }
+
+    .course-row {
+        gap: 8px;
+        display: grid;
+        grid-template-columns: 1fr 1fr auto;
+        align-items: center;
+    }
+
+    .course-row input {
+        grid-column: 1 / span 3;
+        width: 100%;
+    }
+
+    .course-row select {
+        width: 100%;
+    }
+
+    .delete-course,
+    .delete-semester {
+        margin: 0;
+        width: 28px;
+        height: 28px;
+        flex-shrink: 0;
+    }
+
+    .data {
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+    }
+
+    #modal-overlay {
+        padding: 15px;
+    }
+
+    #transcript-model {
+        margin: 0;
+        gap: 15px;
+    }
+
+    #transcript-content th,
+    #transcript-content td {
+        padding: 8px 4px;
+        font-size: 14px;
+    }
 }
